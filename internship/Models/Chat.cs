@@ -1,11 +1,9 @@
 ﻿namespace internship.Models
 {
-    public class Chat
+    public class Chat : BaseEntity
     {
-        public int Id { get; set; }
         public string Name { get; set; } = null!;
-        public int CreatorId { get; set; }
-        public DateTime CreatedAt { get; set; }
+        public int? CreatorId { get; set; }
 
         public User Creator { get; set; } = null!;
         public ICollection<ChatMember> ChatMembers { get; set; } = [];

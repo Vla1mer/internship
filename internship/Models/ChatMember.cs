@@ -1,10 +1,9 @@
 ﻿namespace internship.Models
 {
-    public class ChatMember
+    public class ChatMember : BaseEntity
     {
         public int ChatId { get; set; }
         public int UserId { get; set; }
-        public DateTime CreatedAt { get; set; }
 
         public Chat Chat { get; set; } = null!;
         public User User { get; set; } = null!;
